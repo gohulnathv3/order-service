@@ -1,5 +1,8 @@
 package com.learning.os.api.controller;
 
+import com.learning.os.api.common.Payment;
+import com.learning.os.api.common.TransactionRequest;
+import com.learning.os.api.common.TransactionResponse;
 import com.learning.os.api.entity.Order;
 import com.learning.os.api.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +19,8 @@ public class OrderController {
     private OrderService service;
 
     @PostMapping("/bookOrder")
-    public Order bookOrder(@RequestBody Order order){
-        return service.saveOrder(order);
+    public TransactionResponse bookOrder(@RequestBody TransactionRequest request){
+
+        return null;
     }
 }
