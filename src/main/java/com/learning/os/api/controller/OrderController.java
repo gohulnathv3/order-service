@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.xml.ws.Service;
+
 @RestController
 @RequestMapping("/order")
 public class OrderController {
@@ -20,7 +22,6 @@ public class OrderController {
 
     @PostMapping("/bookOrder")
     public TransactionResponse bookOrder(@RequestBody TransactionRequest request){
-
-        return null;
+        return service.saveOrder(request);
     }
 }
