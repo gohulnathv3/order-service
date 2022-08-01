@@ -1,6 +1,9 @@
 server:
-  port: 9192
+  port:
+    9192
 spring:
-  h2:
-    console:
-      enabled: true
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: TestDB
